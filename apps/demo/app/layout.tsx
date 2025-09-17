@@ -3,9 +3,7 @@ import "./styles.css";
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: LayoutProps<"/">) {
   return (
     <html lang="en">
       <head>
