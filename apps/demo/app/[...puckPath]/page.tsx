@@ -22,9 +22,7 @@ export async function generateMetadata({
 
 export default async function Page({
   params,
-}: {
-  params: Promise<{ framework: string; uuid: string; puckPath: string[] }>;
-}) {
+}: PageProps<"/[...puckPath]">) {
   const { puckPath } = await params;
   const { isEdit, path } = resolvePuckPath(puckPath);
 
