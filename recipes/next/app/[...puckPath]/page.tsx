@@ -30,9 +30,7 @@ export async function generateMetadata({
 
 export default async function Page({
   params,
-}: {
-  params: Promise<{ puckPath: string[] }>;
-}) {
+}: PageProps<"/[...puckPath]">) {
   const { puckPath = [] } = await params;
   const path = `/${puckPath.join("/")}`;
   const data = getPage(path);
